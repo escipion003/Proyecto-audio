@@ -115,6 +115,6 @@ def model1(atributes):
 
 
 def model2(atributes):
-    pickled_model = pickle.load(open('C:/Users/USUARIO/PycharmProjects/pythonProject2/xgb.pkl', 'rb'))
+    pickled_model = pickle.load(open('xgb.pkl', 'rb'))
     return pickled_model.predict(atributes)
 
