@@ -192,22 +192,22 @@ def main():
                     unsafe_allow_html=True)
                 st.pyplot(fig)
 
-            # rad2 = st.sidebar.radio("Choose Visualization", options=[ "Spectrogram","Audio Waves"])
-            #
-            # if rad2 == "Spectrogram":
-            #     fig = spectrogram_plot(file)
-            #     st.set_option('deprecation.showPyplotGlobalUse', False)
-            #     st.markdown(
-            #         f"""<h1 style='color:White;'>Spectrogram : </h1>""",
-            #         unsafe_allow_html=True)
-            #     st.pyplot(fig)
-            # elif rad2 == "Audio Waves":
-            #     fig = soundwaves_plot(file)
-            #     st.set_option('deprecation.showPyplotGlobalUse', False)
-            #     st.markdown(
-            #         f"""<h1 style='color:White;'>Audio Waves : </h1>""",
-            #         unsafe_allow_html=True)
-            #     st.pyplot(fig)
+            rad2 = st.sidebar.radio("Choose Visualization", options=[ "Spectrogram","Audio Waves"])
+            
+            if rad2 == "Spectrogram":
+                fig = spectrogram_plot(file)
+                st.set_option('deprecation.showPyplotGlobalUse', False)
+                st.markdown(
+                    f"""<h1 style='color:White;'>Spectrogram : </h1>""",
+                    unsafe_allow_html=True)
+                st.pyplot(fig)
+            elif rad2 == "Audio Waves":
+                fig = soundwaves_plot(file)
+                st.set_option('deprecation.showPyplotGlobalUse', False)
+                st.markdown(
+                    f"""<h1 style='color:White;'>Audio Waves : </h1>""",
+                    unsafe_allow_html=True)
+                st.pyplot(fig)
 if __name__ == "__main__":
     main()
 
