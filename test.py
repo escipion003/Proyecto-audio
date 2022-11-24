@@ -1,7 +1,7 @@
 
 import numpy as np
 import streamlit as st
-from audio_featurizer import audio_process, spectrogram_plot, model1, model2#,soundwaves_plot
+from audio_featurizer import audio_process, spectrogram_plot, model1, model2,soundwaves_plot
 
 def main():
     """music gender classifier app"""
