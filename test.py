@@ -119,7 +119,8 @@ def main():
             st.audio(file)
 
             # Predecir
-            rad = st.sidebar.radio("Choose model", options=["XGB","Tree","Spectrogram"])
+            rad = st.sidebar.radio("Choose model", options=["XGB","Tree"#,"Spectrogram"
+                                                           ])
 
             #rad = st.sidebar.checkbox(label="Do You want to see the spectrogram ?")
             if rad == "XGB":
