@@ -184,13 +184,13 @@ def main():
                         unsafe_allow_html=True)
 
 
-            elif rad == "Spectrogram":
-                fig = spectrogram_plot(file)
-                st.set_option('deprecation.showPyplotGlobalUse', False)
-                st.markdown(
-                    f"""<h1 style='color:Green;'>Spectrogram : </h1>""",
-                    unsafe_allow_html=True)
-                st.pyplot(fig)
+#             elif rad == "Spectrogram":
+#                 fig = spectrogram_plot(file)
+#                 st.set_option('deprecation.showPyplotGlobalUse', False)
+#                 st.markdown(
+#                     f"""<h1 style='color:Green;'>Spectrogram : </h1>""",
+#                     unsafe_allow_html=True)
+#                 st.pyplot(fig)
 
             rad2 = st.sidebar.radio("Choose Visualization", options=[ "Spectrogram","Audio Waves"])
             
