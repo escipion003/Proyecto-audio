@@ -110,7 +110,7 @@ def soundwaves_plot(audio_file: str):
 
 
 def model1(atributes):
-    pickled_model = pickle.load(open('C:/Users/USUARIO/PycharmProjects/pythonProject2/rforest.pkl', 'rb'))
+    pickled_model = pickle.load(open('tree.pkl', 'rb'))
     return pickled_model.predict(atributes)
 
 
