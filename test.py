@@ -180,7 +180,7 @@ def main():
                     #     f"""<h1 style='color:yellow;'>Prediction xgb : <span style='color:white;'>{predictions}</span></h1>""",
                     #     unsafe_allow_html=True)
                     st.markdown(
-                        f"""<h1 style='color:yellow;'>Prediction rforest : <span style='color:white;'>{predictions2}</span></h1>""",
+                        f"""<h1 style='color:yellow;'>Prediction Tree : <span style='color:white;'>{predictions2}</span></h1>""",
                         unsafe_allow_html=True)
 
 
