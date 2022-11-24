@@ -119,7 +119,7 @@ def main():
             st.audio(file)
 
             # Predecir
-            rad = st.sidebar.radio("Choose model", options=["XGB","Rforest","Spectrogram"])
+            rad = st.sidebar.radio("Choose model", options=["XGB","Tree","Spectrogram"])
 
             #rad = st.sidebar.checkbox(label="Do You want to see the spectrogram ?")
             if rad == "XGB":
@@ -152,7 +152,7 @@ def main():
                     # st.markdown(
                     #     f"""<h1 style='color:yellow;'>Prediction rforest : <span style='color:white;'>{predictions2}</span></h1>""",
                     #     unsafe_allow_html=True)
-            elif rad == "Rforest":
+            elif rad == "Tree":
                 if st.button("Classify Audio"):
                     uploaded_audio = audio_process(file)
 
