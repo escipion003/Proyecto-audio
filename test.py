@@ -49,10 +49,64 @@ def main():
     #     """<h1 style='text-align: center; color: white;font-size:60px;margin-top:-50px;'>AUDIO CLASSIFIER</h1><h1 style='text-align: center; color: white;font-size:30px;margin-top:-30px;'>Using Machine Learning</h1>""",
     #     unsafe_allow_html=True)
 
+    
+    
+
+   ###################################################################################################################################################################
+
+
+   check = st.sidebar.checkbox('Probar un demo')
+
+    if check:
+        rad_test = st.sidebar.radio("Select format of audio file", options=['mp3'])
+
+        if rad_test == "mp3":
+            rad_file = st.sidebar.radio("Select the name of song", ["Trumpet Tune"])
+            if rad_file == "Trumpet Tune":
+                rad = st.sidebar.radio("Choose Options", options=["Predict", "Spectrogram"])
+                st.audio("C:/Users/USUARIO/PycharmProjects/pythonProject2/Trumpet Tune.mp3")
+                # rad = st.sidebar.checkbox(label="Do You want to see the spectrogram ?")
+                if rad == "Predict":
+                    if st.button("Classify Audio"):
+                        uploaded_audio = audio_process("C:/Users/USUARIO/PycharmProjects/pythonProject2/Trumpet Tune.mp3")
+
+
+
+
+
+                        generos = ["blues", "classical", "country", "disco", "hiphop", "jazz", "metal", "pop", "reggae",
+                                   "rock"]
+
+                        out_xgb = model2(uploaded_audio)[0]
+                        predictions = generos[out_xgb]
+
+                        st.markdown(
+                            f"""<h1 style='color:yellow;'>Prediction xgb : <span style='color:white;'>{predictions}</span></h1>""",
+                            unsafe_allow_html=True)
+
+                elif rad == "Spectrogram":
+                    fig = spectrogram_plot("Man Out Of Town.mp3")
+                    st.set_option('deprecation.showPyplotGlobalUse', False)
+                    st.markdown(
+                        f"""<h1 style='color:yellow;'>Spectrogram : </h1>""",
+                        unsafe_allow_html=True)
+                    st.pyplot(fig)
+
+
+
+
+
+
+    ##################################################################################################################
+
+
+
 
 
     # Seleccionar audio
     radio = st.sidebar.radio("Select format of audio file", options=['mp3', 'wav'])
+    
+    
 
     if radio == 'wav':
 
